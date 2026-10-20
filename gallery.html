@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея — Кавʼярня DÉ LA VIE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-stone-50 text-stone-800 font-sans">
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-stone-200">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="text-2xl font-bold tracking-tight text-stone-900">DÉ LA VIE</a>
+            <nav class="hidden md:flex items-center space-x-2 text-stone-600 font-medium">
+                <a href="index.html" class="hover:bg-amber-50 hover:text-amber-700 rounded-lg px-4 py-2 transition">Головна</a>
+                <a href="about.html" class="hover:bg-amber-50 hover:text-amber-700 rounded-lg px-4 py-2 transition">Про нас</a>
+                <a href="services.html" class="hover:bg-amber-50 hover:text-amber-700 rounded-lg px-4 py-2 transition">Меню</a>
+                <a href="gallery.html" class="bg-amber-500 text-white rounded-lg px-4 py-2 transition">Галерея</a>
+                <a href="booking.html" class="hover:bg-amber-50 hover:text-amber-700 rounded-lg px-4 py-2 transition">Бронювання</a>
+                <a href="contacts.html" class="hover:bg-amber-50 hover:text-amber-700 rounded-lg px-4 py-2 transition">Контакти</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="bg-stone-100 py-4 border-b border-stone-200">
+        <div class="max-w-6xl mx-auto px-6 text-sm text-stone-600">
+            <a href="index.html" class="hover:underline">Головна</a> > <span class="text-stone-900 font-semibold">Галерея</span>
+        </div>
+    </div>
+
+    <section class="py-20 px-6 max-w-6xl mx-auto">
+        <div class="text-index text-center mb-16">
+            <h1 class="text-4xl font-bold mb-4">Наша атмосфера</h1>
+            <p class="text-stone-600">Затишні куточки кав'ярні DÉ LA VIE</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="aspect-square overflow-hidden rounded-xl">
+                <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=600" alt="Кав'ярня" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="aspect-square overflow-hidden rounded-xl">
+                <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=600" alt="Кава" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="aspect-square overflow-hidden rounded-xl">
+                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=600" alt="Інтер'єр" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="aspect-square overflow-hidden rounded-xl">
+                <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=600" alt="Напій" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="aspect-square overflow-hidden rounded-xl">
+                <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&q=80&w=600" alt="Лате" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="aspect-square overflow-hidden rounded-xl">
+                <img src="https://images.unsplash.com/photo-1577968897966-3d4325b36b61?auto=format&fit=crop&q=80&w=600" alt="Рожевий лате" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-stone-900 text-stone-300 py-12">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-white font-bold text-lg mb-4">DÉ LA VIE</h3>
+                <p class="text-sm text-stone-400">Місце про затишок, смачну каву та особливі моменти життя у Житомирі.</p>
+            </div>
+            <div>
+                <h3 class="text-white font-bold text-lg mb-4">Контакти</h3>
+                <p class="text-sm text-stone-400 mb-2">вулиця Велика Бердичівська, Житомир</p>
+                <p class="text-sm text-stone-400 mb-2">+380681234567</p>
+                <p class="text-sm text-stone-400">info@delavie-cafe.ua</p>
+            </div>
+            <div>
+                <h3 class="text-white font-bold text-lg mb-4">Години роботи</h3>
+                <p class="text-sm text-stone-400 mb-2">Пн-Нд: 08:00 - 21:00</p>
+            </div>
+        </div>
+    </footer>
+<script>
+    document.getElementById('mobile-toggle')?.addEventListener('click', function() {
+      document.getElementById('mobile-menu')?.classList.toggle('hidden');
+    });
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+      });
+    });
+  </script>
+</body>
+</html>
